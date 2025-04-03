@@ -12,10 +12,93 @@
 :root {
     /* Light Theme */
     --color-primary: #0d3137;
-    --color-secundary: #0b5351;
+    --color-secondary: #0b5351;
     --color-tertiary: #4e8098;
     --color-text: #222;
     --color-background: #f9f9f9;
     --color-border: #8e8c8c;
     --font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    color: white;
+    font-weight: bold;
+}
+
+.main_pagina {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.seccion_energias {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.articulo_energia {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.titulo_energia {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-tertiary);
+    padding-bottom: 0.5rem;
+}
+
+.parrafo_energia {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .main_pagina {
+        padding: 1rem;
+    }
 }
