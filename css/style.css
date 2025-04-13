@@ -1,6 +1,5 @@
 /* Color Palette */
 :root {
-    /* Light Theme */
     --color-primary: #0d3137;
     --color-secondary: #0b5351;
     --color-tertiary: #4e8098;
@@ -22,6 +21,7 @@
 }
 
 body {
+    font-family: var(--font-family);
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.6;
@@ -41,18 +41,21 @@ nav ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav li {
     color: white;
     font-weight: bold;
+    margin: 0.5rem;
 }
 
 .logo {
     width: 5rem;
+    height: auto;
 }
 
-.enlaces_header{
+.enlaces_header {
     color: var(--color-accent);
     font-weight: bold;
     font-size: 1.5rem;
@@ -62,39 +65,184 @@ nav li {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    margin-top: 7rem;
 }
 
-.inicio_pagina{
+.inicio_pagina {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top: 10rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.inicio_pagina h1 {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.inicio_pagina h2 {
+    font-size: 1.5rem;
+    color: var(--color-tertiary);
 }
 
 .seccion_energias {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 10rem;
+    margin-bottom: 3rem;
 }
 
 .articulo_energia {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 0.8rem;
     padding: 1.5rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
 }
 
 .titulo_energia {
     color: var(--color-secondary);
     margin-bottom: 1rem;
-    border-bottom: 2px solid var(--color-tertiary);
+    border-bottom: 0.2rem solid var(--color-tertiary);
     padding-bottom: 0.5rem;
+    font-size: 1.8rem;
 }
 
 .parrafo_energia {
     margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.lista-eco {
+    margin-left: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.lista-eco li {
+    margin-bottom: 0.5rem;
+}
+
+.objetivos_agenda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.ods-card {
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+
+.titulo_seccion {
+    color: var(--color-secondary);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    grid-column: 1 / -1;
+}
+
+.green-computing-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.calculadora-section {
+    margin-bottom: 3rem;
+}
+
+.formulario-huella {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label-huella {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.input-huella, .select-huella {
+    padding: 0.8rem;
+    border: 0.1rem solid var(--color-tertiary);
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.calcular-btn {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.calcular-btn:hover {
+    background-color: var(--color-tertiary);
+}
+
+.resultado-container {
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resultado-huella {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.equivalente-huella {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.recomendaciones-article {
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.recomendaciones-article h3 {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.recomendaciones-article ul {
+    margin-left: 1.5rem;
+}
+
+.recomendaciones-article li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
 }
 
 footer {
@@ -105,25 +253,103 @@ footer {
     margin-top: 2rem;
 }
 
-footer section {
+.logo-footer {
+    width: 8rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.texto-footer {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.integrantes-equipo {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-footer a {
+.integrante {
+    text-align: center;
     color: white;
+    font-size: 1.1rem;
 }
 
-/* Responsive */
+.integrante p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+/* Lazy loading para imágenes */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         gap: 1rem;
     }
-    
+
+    header {
+        height: auto;
+        padding: 1rem 0.5rem;
+    }
+
     .main_pagina {
         padding: 1rem;
+        margin-top: 12rem;
+    }
+
+    .inicio_pagina h1 {
+        font-size: 2rem;
+    }
+
+    .inicio_pagina h2 {
+        font-size: 1.2rem;
+    }
+
+    .titulo_seccion {
+        font-size: 1.8rem;
+    }
+
+    .titulo_energia {
+        font-size: 1.5rem;
+    }
+
+    .parrafo_energia {
+        font-size: 1rem;
+    }
+
+    .objetivos_agenda {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-huella {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_pagina {
+        margin-top: 15rem;
+    }
+
+    .enlaces_header {
+        font-size: 1.2rem;
+    }
+
+    .integrantes-equipo {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
