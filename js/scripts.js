@@ -38,7 +38,4 @@ document.getElementById('huellaForm').addEventListener('submit', function(e) {
         <li>Reduce el consumo de electricidad con electrodomésticos eficientes</li>
         <li>Desconecta los dispositivos que no estés usando (no los dejes en standby)</li>
     </ul>`;
-
-    // Scroll a los resultados
-    document.getElementById('resultado-huella').scrollIntoView({ behavior: 'smooth' });
 });
